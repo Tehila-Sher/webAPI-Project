@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class UserBLL : IUserBLL
+    public class UserBLL : IUserBLL
     {
         IUserDAL userDAL;
 

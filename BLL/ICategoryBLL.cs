@@ -15,5 +15,6 @@ namespace BLL
         public void addCategory(Category newCategory);
         public void removeCategory(int id);
         public void updateCategory(Category updatedCategory);
+      //  void addCategory(global::DTO.CategoryDTO category);
     }
 }

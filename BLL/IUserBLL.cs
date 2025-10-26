@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal interface IUserBLL
+    public interface IUserBLL
     {
         public List<User> getAllUsers();
         public User getUserById(int id);

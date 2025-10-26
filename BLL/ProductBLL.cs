@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class ProductBLL : IProductBLL
+    public class ProductBLL : IProductBLL
     {
         IProductDAL productDAL;
 

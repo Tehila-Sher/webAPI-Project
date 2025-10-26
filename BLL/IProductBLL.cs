@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal interface IProductBLL
+    public interface IProductBLL
     {
         public List<Product> getAllProducts();
         public Product getProductById(int id);
