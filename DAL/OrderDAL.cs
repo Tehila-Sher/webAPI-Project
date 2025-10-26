@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
+
     public class OrderDAL : IOrderDAL
     {
         ShopContext shopContext;
@@ -15,6 +16,8 @@ namespace DAL
         {
             shopContext = _shopContext;
         }
+     
+      
         public List<Order> getAllOrders()
         {
            return shopContext.Orders.ToList();
@@ -22,7 +25,8 @@ namespace DAL
 
         public Order getOrderById(int id)
         {
-            Order  o= shopContext.Orders.FirstOrDefault(x => x.OrderID == id);
+            Order  o= shopContext.Orders.FirstOrDefault(x => x.OrderId == id);
+
             if (o == null)
                 return null;
             return o;
@@ -46,7 +50,9 @@ namespace DAL
     
         public void removeOrder(int id)
         {
-            Order o = shopContext.Orders.FirstOrDefault(x => x.OrderID == id);
+
+            Order o = shopContext.Orders.FirstOrDefault(x => x.OrderId == id);
+
             if (o != null)
             {
                 shopContext.Orders.Remove(o);
@@ -56,7 +62,9 @@ namespace DAL
 
         public void updateOrder(Order updatedOrder)
         {
-            Order o = shopContext.Orders.FirstOrDefault(x => x.OrderID == updatedOrder.OrderID);
+
+            Order o = shopContext.Orders.FirstOrDefault(x => x.OrderId == updatedOrder.OrderId);
+
             if (o != null)
             {
                 o.OrderDate = updatedOrder.OrderDate;

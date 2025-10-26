@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
+
+
     public interface IProductBLL
+
     {
         public List<Product> getAllProducts();
         public Product getProductById(int id);

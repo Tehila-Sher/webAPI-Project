@@ -5,7 +5,7 @@ namespace DAL.Models;
 
 public partial class Order
 {
-    public int OrderID { get; set; }
+    public int OrderId { get; set; }
 
     public DateTime OrderDate { get; set; }
 
